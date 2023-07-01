@@ -1,16 +1,14 @@
 # benesse_hackathon
 
-A new Flutter project.
+努力経験値（仮）を競い合うアプリ
 
-## Getting Started
+### commitについて
 
-This project is a starting point for a Flutter application.
+- コミットメッセージは英語、日本語どっちでも大丈夫です。
+  - 何かしら適当に区別できるように書いてもらえると嬉しいです。
 
-A few resources to get you started if this is your first Flutter project:
+### branch運用について
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 新機能の実装は`feat/foobar`、修正は`fix/foobar`としてください。
+- ブランチは`main`から切って、プルリクエストの向きも`main`に向けてください。
+- 自分（@porinky0424）が`main`を管理し、マージも自分がやります。
