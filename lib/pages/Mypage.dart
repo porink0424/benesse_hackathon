@@ -1,28 +1,6 @@
 import 'package:benesse_hackathon/constants/route.dart';
 import 'package:flutter/material.dart';
 
-
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'My page',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'My page'),
-    );
-  }
-}
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
@@ -45,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             width: double.infinity,
             height: 200,
-            margin: EdgeInsets.only(top: 20, left: 10 ,right: 10),
+            margin: EdgeInsets.only(top: 20, left: 10, right: 10),
             decoration: BoxDecoration(
               color: Colors.white, // 背景色を指定
               borderRadius: BorderRadius.circular(10),
@@ -63,10 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const Text(
                   'Taro Benesse',
                   textAlign: TextAlign.start,
-                  style: TextStyle(
-                    fontSize: 20,
-                    height: 3
-                  ),
+                  style: TextStyle(fontSize: 20, height: 3),
                 ),
                 Container(
                   alignment: Alignment.center,
@@ -75,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       SizedBox(width: 10),
                       Image.asset(
-                        '/Users/sotaaraki/StudioProjects/mypage/lib/all2.png',
+                        "images/yamcha.png",
                         width: 350,
                         height: 125,
                       ),
@@ -85,7 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
           ),
-
           SizedBox(height: 10),
           Row(
             children: <Widget>[
@@ -114,7 +88,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         side: BorderSide(color: Colors.black, width: 2),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, ROUTE.MEASURE_START);
+                    },
                     child: const Align(
                       alignment: Alignment.center,
                       child: Column(
@@ -268,62 +244,58 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: 3,
+          onTap: (int index) {
+            switch (index) {
+              case 0:
+                Navigator.pushNamed(context, ROUTE.RANKING);
+                break;
+              case 1:
+                Navigator.pushNamed(context, ROUTE.TARGET);
+                break;
+              case 2:
+                Navigator.pushNamed(context, ROUTE.PARAMETER);
+                break;
+              case 3:
+                Navigator.pushNamed(context, ROUTE.MYPAGE);
+                break;
+            }
+          },
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage("images/ranking.png"),
+                  size: 50.0,
+                ),
+                label: "Ranking"),
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage("images/target.png"),
+                  size: 50.0,
+                ),
+                label: "Target"),
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage("images/parameter.png"),
+                  size: 50.0,
+                ),
+                label: "Parameter"),
+            BottomNavigationBarItem(
+                icon: ImageIcon(
+                  AssetImage("images/home.png"),
+                  size: 50.0,
+                ),
+                label: "MyPage"),
+          ]),
     );
   }
 }
 
-
-
-
-
 class Mypage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-            title: Text(
-          'Mypage',
-          textDirection: TextDirection.ltr,
-        )),
-        body: Column(
-          children: [
-            TextButton(
-              child: Text(
-                'Go to ${ROUTE.TARGET}',
-                textDirection: TextDirection.ltr,
-              ),
-              onPressed: () {
-                Navigator.pushNamed(context, ROUTE.TARGET);
-              },
-            ),
-            TextButton(
-              child: Text(
-                'Go to ${ROUTE.PARAMETER}',
-                textDirection: TextDirection.ltr,
-              ),
-              onPressed: () {
-                Navigator.pushNamed(context, ROUTE.PARAMETER);
-              },
-            ),
-            TextButton(
-              child: Text(
-                'Go to ${ROUTE.RANKING}',
-                textDirection: TextDirection.ltr,
-              ),
-              onPressed: () {
-                Navigator.pushNamed(context, ROUTE.RANKING);
-              },
-            ),
-            TextButton(
-              child: Text(
-                'Go to ${ROUTE.MEASURE_START}',
-                textDirection: TextDirection.ltr,
-              ),
-              onPressed: () {
-                Navigator.pushNamed(context, ROUTE.MEASURE_START);
-              },
-            ),
-          ],
-        ));
+    return const MyHomePage(title: 'My page');
   }
 }
