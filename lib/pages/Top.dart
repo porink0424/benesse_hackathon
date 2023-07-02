@@ -1,6 +1,7 @@
 import 'package:benesse_hackathon/constants/route.dart';
 import 'package:flutter/material.dart';
 
+
 //Topページのdartファイル
 class Top extends StatelessWidget {
   // This widget is the root of your application.
@@ -14,7 +15,7 @@ class Top extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.white,
         //ワンタップで次へ
-        //ロゴとTap to startを並べて表示 
+        //ロゴとTap to startを並べて表示
         body: GestureDetector(
           behavior: HitTestBehavior.opaque,
           onTap: () {
