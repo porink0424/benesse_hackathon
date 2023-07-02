@@ -1,27 +1,29 @@
 import 'package:benesse_hackathon/constants/route.dart';
 import 'package:flutter/material.dart';
 
-class MeasureEnd extends StatelessWidget {
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
-            title: Text(
-          'MeasureEnd',
-          textDirection: TextDirection.ltr,
-        )),
-        body: Row(
-          children: [
-            TextButton(
-              child: Text(
-                'Go to ${ROUTE.MYPAGE}',
-                textDirection: TextDirection.ltr,
-              ),
-              onPressed: () {
-                Navigator.pushNamed(context, ROUTE.MYPAGE);
-              },
-            ),
-          ],
-        ));
+          title: Text("Time"),
+        ),
+        body: GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTap: () {
+            //ここに遷移を記述
+          },
+          child: Center(
+            child: Image.asset('assets/finish_measure_page.jpg'),
+          ),
+        ),
+      ),
+    );
   }
 }
