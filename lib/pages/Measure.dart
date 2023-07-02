@@ -4,10 +4,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:benesse_hackathon/models/stop_watch_model.dart';
 import 'package:provider/provider.dart';
 
-class MainPage extends StatelessWidget {
+import 'models/stop_watch_model.dart';
+
+class Measure extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(title: 'provider demo', home: _ProviderWidget());
@@ -84,8 +85,9 @@ class _MainPageBody extends StatelessWidget {
                     child: Text('休憩')),
                 SizedBox(width: deviceWidth / 15),
                 ElevatedButton(
-                  onPressed: () {//ここに次のページに行く操作
-                     },
+                  onPressed: () {
+                    //ここに次のページに行く操作
+                  },
                   child: Text(
                     'おしまい',
                     textDirection: TextDirection.ltr,
