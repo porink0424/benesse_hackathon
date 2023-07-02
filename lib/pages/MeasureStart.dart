@@ -1,7 +1,20 @@
 import 'package:benesse_hackathon/constants/route.dart';
 import 'package:flutter/material.dart';
 
-class MeasureStart extends StatelessWidget {
+class MeasureStart extends StatefulWidget {
+  @override
+  _MeasureStartState createState() => _MeasureStartState();
+}
+
+class _MeasureStartState extends State<MeasureStart> {
+  List<bool> _isActive = [false, false, false, false, false];
+
+  void _toggleIsActive(int index) {
+    setState(() {
+      _isActive[index] = !_isActive[index];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final double deviceWidth = MediaQuery.of(context).size.width;
@@ -19,71 +32,30 @@ class MeasureStart extends StatelessWidget {
             Container(
               child: Row(
                 children: [
-                  Container(
+                  ["国", Colors.red, Colors.red[50]],
+                  ["社", Colors.orange, Colors.orange[50]],
+                  ["英", Colors.yellow, Colors.yellow[50]],
+                  ["理", Colors.green, Colors.green[50]],
+                  ["数", Colors.blue, Colors.blue[50]],
+                ].asMap().entries.map((entry) {
+                  return Container(
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          _toggleIsActive(entry.key);
+                        },
                         style: TextButton.styleFrom(
-                            backgroundColor: Colors.red, shape: CircleBorder()),
-                        child: Text(
-                          '国',
-                          textDirection: TextDirection.ltr,
-                          style: TextStyle(fontSize: 24, color: Colors.white),
-                        ),
-                      ),
-                      width: deviceWidth / 5),
-                  Container(
-                      child: TextButton(
-                        onPressed: () {},
-                        style: TextButton.styleFrom(
-                            backgroundColor: Colors.orange,
+                            backgroundColor: _isActive[entry.key]
+                                ? entry.value[1] as Color
+                                : entry.value[2] as Color,
                             shape: CircleBorder()),
                         child: Text(
-                          '社',
+                          "${entry.value[0]}",
                           textDirection: TextDirection.ltr,
                           style: TextStyle(fontSize: 24, color: Colors.white),
                         ),
                       ),
-                      width: deviceWidth / 5),
-                  Container(
-                      child: TextButton(
-                        onPressed: () {},
-                        style: TextButton.styleFrom(
-                            backgroundColor: Colors.yellow,
-                            shape: CircleBorder()),
-                        child: Text(
-                          '英',
-                          textDirection: TextDirection.ltr,
-                          style: TextStyle(fontSize: 24, color: Colors.white),
-                        ),
-                      ),
-                      width: deviceWidth / 5),
-                  Container(
-                    child: TextButton(
-                      onPressed: () {},
-                      style: TextButton.styleFrom(
-                          backgroundColor: Colors.green, shape: CircleBorder()),
-                      child: Text(
-                        '社',
-                        textDirection: TextDirection.ltr,
-                        style: TextStyle(fontSize: 24, color: Colors.white),
-                      ),
-                    ),
-                    width: deviceWidth / 5,
-                  ),
-                  Container(
-                      child: TextButton(
-                        onPressed: () {},
-                        style: TextButton.styleFrom(
-                            backgroundColor: Colors.blue,
-                            shape: CircleBorder()),
-                        child: Text(
-                          '数',
-                          textDirection: TextDirection.ltr,
-                          style: TextStyle(fontSize: 24, color: Colors.white),
-                        ),
-                      ),
-                      width: deviceWidth / 5),
-                ],
+                      width: deviceWidth / 5);
+                }).toList(),
               ),
             ),
             Column(
