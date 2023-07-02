@@ -9,7 +9,7 @@ class RANKING {
     {"name": "USERNAME2", "exp": "90.0"},
     {"name": "USERNAME3", "exp": "80.0"},
     {"name": "USERNAME3", "exp": "80.0"},
-    {"name": "USERNAME3", "exp": "80.0"},
+    {"name": "ベネッセ　太郎", "exp": "80.0"},
     {"name": "USERNAME4", "exp": "70.0"},
     {"name": "USERNAME4", "exp": "70.0"},
     {"name": "USERNAME4", "exp": "70.0"},
@@ -41,7 +41,7 @@ class RANKING {
   ];
   static const SCHOOL = [
     {"name": "USERNAME1", "exp": "100.0"},
-    {"name": "USERNAME1", "exp": "100.0"},
+    {"name": "ベネッセ　太郎", "exp": "100.0"},
     {"name": "USERNAME2", "exp": "90.0"},
     {"name": "USERNAME2", "exp": "90.0"},
     {"name": "USERNAME3", "exp": "80.0"},
@@ -77,7 +77,7 @@ class RANKING {
     {"name": "USERNAME8", "exp": "30.0"},
   ];
   static const FRIENDS = [
-    {"name": "USERNAME1", "exp": "100.0"},
+    {"name": "ベネッセ　太郎", "exp": "100.0"},
     {"name": "USERNAME1", "exp": "100.0"},
     {"name": "USERNAME2", "exp": "90.0"},
     {"name": "USERNAME2", "exp": "90.0"},

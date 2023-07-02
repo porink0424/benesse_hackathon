@@ -97,7 +97,7 @@ class RankingAll extends StatelessWidget {
                     shape: (entry.key != RANKING.MY_INDEX_IN_ALL)
                         ? null
                         : const RoundedRectangleBorder(
-                            side: BorderSide(color: Colors.red, width: 8),
+                            side: BorderSide(color: Colors.red, width: 4),
                           ),
                     child: Row(
                       children: [
@@ -191,7 +191,7 @@ class RankingBySchool extends StatelessWidget {
                     shape: (entry.key != RANKING.MY_INDEX_IN_SCHOOL)
                         ? null
                         : const RoundedRectangleBorder(
-                            side: BorderSide(color: Colors.red, width: 8),
+                            side: BorderSide(color: Colors.red, width: 4),
                           ),
                     child: Row(
                       children: [
@@ -285,7 +285,7 @@ class RankingByFriends extends StatelessWidget {
                     shape: (entry.key != RANKING.MY_INDEX_IN_FRIENDS)
                         ? null
                         : const RoundedRectangleBorder(
-                            side: BorderSide(color: Colors.red, width: 8),
+                            side: BorderSide(color: Colors.red, width: 4),
                           ),
                     child: Row(
                       children: [
@@ -319,6 +319,7 @@ class Ranking extends StatelessWidget {
         'Ranking',
         textDirection: TextDirection.ltr,
       )),
+      backgroundColor: const Color(0xFFFFF8E1),
       body: DefaultTabController(
           length: 3,
           child: Container(

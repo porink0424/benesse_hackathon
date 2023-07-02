@@ -22,9 +22,10 @@ class _MeasureStartState extends State<MeasureStart> {
     return Scaffold(
       appBar: AppBar(
           title: const Text(
-        '学習時間計測',
+        'Timer',
         textDirection: TextDirection.ltr,
       )),
+      backgroundColor: const Color(0xFFFFF8E1),
       body: Center(
         child: Container(
           height: 200,

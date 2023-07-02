@@ -39,9 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               children: [
                 const Text(
-                  'Taro Benesse',
+                  'ベネッセ　太郎',
                   textAlign: TextAlign.start,
-                  style: TextStyle(fontSize: 20, height: 3),
+                  style: TextStyle(
+                      fontSize: 20, height: 3, fontWeight: FontWeight.bold),
                 ),
                 Container(
                   alignment: Alignment.center,
@@ -188,7 +189,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                           Text(
-                            '14日',
+                            '37日',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 30,
@@ -228,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                           Text(
-                            '14個',
+                            '15個',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 30,
@@ -296,6 +297,6 @@ class _MyHomePageState extends State<MyHomePage> {
 class Mypage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MyHomePage(title: 'My page');
+    return const MyHomePage(title: 'My Page');
   }
 }

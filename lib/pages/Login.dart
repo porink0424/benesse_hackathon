@@ -6,9 +6,9 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ログイン'),
+        title: const Text('Login'),
       ),
-      backgroundColor: const Color(0xFFEEECE4),
+      backgroundColor: const Color(0xFFFFF8E1),
       body: Column(
         children: [
           Container(
@@ -61,7 +61,7 @@ class Login extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '連続ログイン記録',
+                  '継続ログイン記録',
                   // textAlign: TextAlign.start,
                   style: TextStyle(
                     fontSize: 20,
@@ -158,7 +158,10 @@ class Login extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, ROUTE.MYPAGE);
                 },
-                child: Text("Tap to next"),
+                child: Text(
+                  "Tap to next",
+                  style: TextStyle(color: Colors.black),
+                ),
                 style: TextButton.styleFrom(
                   textStyle: const TextStyle(fontSize: 25),
                   foregroundColor: const Color(0xF375717A), // foreground
