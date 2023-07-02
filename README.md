@@ -2,7 +2,8 @@
 
 <img src="https://github.com/porinky0424/benesse_hackathon/assets/83964523/8bdfd150-9b15-4715-8577-20dccdbc71d9" width="30%" />
 
-Study EXP（努力経験値）を競い合うアプリ
+Study EXP（努力経験値）を競い合うアプリ（オーディエンス賞受賞）
+
 
 ### commitについて
 
