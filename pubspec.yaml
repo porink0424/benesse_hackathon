@@ -65,6 +65,7 @@ flutter:
   assets:
     - images/earth.png
     - images/friends.png
+    - images/home.png
     - images/parameter.png
     - images/ranking.png
     - images/school.png

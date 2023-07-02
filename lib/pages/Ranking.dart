@@ -426,7 +426,7 @@ class Ranking extends StatelessWidget {
             // TODO: MyPageのアイコン画像
             BottomNavigationBarItem(
                 icon: ImageIcon(
-                  AssetImage("images/parameter.png"),
+                  AssetImage("images/home.png"),
                   size: 50.0,
                 ),
                 label: "MyPage"),
