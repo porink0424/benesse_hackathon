@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
             //ここに遷移を記述
           },
           child: Center(
-            child: Image.asset('images/finish_page.jpg'),
+            child: Image.asset('images/finish_page.png'),
           ),
         ),
       ),
