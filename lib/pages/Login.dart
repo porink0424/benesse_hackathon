@@ -8,11 +8,12 @@ class Login extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Log in calendar'),
       ),
+      // backgroundColor: const Color(0xF3E9D9FF),
       body: Column(
         children: [
           Container(
             width: double.infinity,
-            height: 80,
+            height: 60,
             margin: EdgeInsets.only(top: 20, left: 20 ,right: 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -51,13 +52,29 @@ class Login extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
-                Text(
-                  '37日目',
-                  // textAlign: TextAlign.start,
-                  style: TextStyle(
-                    fontSize: 60,
-                    color: Colors.black,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '37',
+                      // textAlign: TextAlign.start,
+                      style: TextStyle(
+                        fontSize: 60,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 5),
+                      child: Text(
+                        '日目',
+                        // textAlign: TextAlign.start,
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.black,
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ],
             ),
@@ -74,35 +91,56 @@ class Login extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '連続ログイン記録',
+                  '合計ログイン',
+
                   // textAlign: TextAlign.start,
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.black,
                   ),
                 ),
-                Text(
-                  '52日目',
-                  // textAlign: TextAlign.start,
-                  style: TextStyle(
-                    fontSize: 60,
-                    color: Colors.black,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '52',
+                      // textAlign: TextAlign.start,
+                      style: TextStyle(
+                        fontSize: 60,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 5),
+                      child: Text(
+                        '日目',
+                        // textAlign: TextAlign.start,
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.black,
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ],
             ),
           ),
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, ROUTE.MYPAGE);
-            },
-            child: Text("Tap to next"),
-            style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 30),
-              foregroundColor: Colors.blue, // foreground
-              fixedSize: Size(200, 100),
-              alignment: Alignment.topCenter,
-            )),
+          Container(
+            width: double.infinity,
+            // height: 10,
+            margin: EdgeInsets.only(top: 20, left: 20 ,right: 20),
+            child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, ROUTE.MYPAGE);
+                },
+                child: Text("Tap to next"),
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 30),
+                  foregroundColor: Color(0xF375717A), // foreground
+                  alignment: Alignment.topCenter,
+                )),
+          ),
         ],
       ),
     );
