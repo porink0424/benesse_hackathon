@@ -6,8 +6,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Log in calendar'),
-        backgroundColor: const Color(0xFF5C94CB),
+        title: const Text('ログイン'),
       ),
       backgroundColor: const Color(0xFFEEECE4),
       body: Column(
@@ -15,7 +14,7 @@ class Login extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 60,
-            margin: EdgeInsets.only(top: 20, left: 20 ,right: 20),
+            margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.black, width: 2),
@@ -45,7 +44,7 @@ class Login extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 160,
-            margin: EdgeInsets.only(top: 40, left: 20 ,right: 20),
+            margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.black, width: 2),
@@ -99,7 +98,7 @@ class Login extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 160,
-            margin: EdgeInsets.only(top: 20, left: 20 ,right: 20),
+            margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.black, width: 2),
@@ -154,7 +153,7 @@ class Login extends StatelessWidget {
           Container(
             width: double.infinity,
             // height: 10,
-            margin: EdgeInsets.only(top: 25, left: 20 ,right: 20),
+            margin: const EdgeInsets.only(top: 25, left: 20, right: 20),
             child: TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, ROUTE.MYPAGE);
@@ -162,7 +161,7 @@ class Login extends StatelessWidget {
                 child: Text("Tap to next"),
                 style: TextButton.styleFrom(
                   textStyle: const TextStyle(fontSize: 25),
-                  foregroundColor: const Color(0xF375717A),// foreground
+                  foregroundColor: const Color(0xF375717A), // foreground
                   alignment: Alignment.topCenter,
                 )),
           ),
