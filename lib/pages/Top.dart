@@ -23,21 +23,11 @@ class Top extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(
-              child: Container(
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: FractionalOffset.topCenter,
-                      end: FractionalOffset.bottomCenter,
-                      colors: [
-                        Colors.lightBlue.shade700,
-                        Colors.lightBlue.shade50
-                      ],
-                    ),
-                    shape: BoxShape.circle),
-                height: deviceHeight / 1.55,
-                width: deviceWidth / 2,
-              ),
+            Container(
+                margin: EdgeInsets.all(45),
+                child: Center(
+                  child: Image.asset('images/main_logo.png'),
+                ),
             ),
             Align(
               alignment: Alignment.center,
