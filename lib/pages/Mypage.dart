@@ -1,6 +1,7 @@
 import 'package:benesse_hackathon/constants/route.dart';
 import 'package:flutter/material.dart';
 
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -44,31 +45,42 @@ class _MyHomePageState extends State<MyHomePage> {
           Container(
             width: double.infinity,
             height: 200,
+            margin: EdgeInsets.only(top: 20, left: 10 ,right: 10),
             decoration: BoxDecoration(
+              color: Colors.white, // 背景色を指定
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.black, width: 2),
+              boxShadow: const [
+                BoxShadow(
+                    color: Colors.black26,
+                    blurRadius: 0.1,
+                    spreadRadius: 0.1,
+                    offset: Offset(3, 3))
+              ],
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+            child: Column(
               children: [
                 const Text(
-                  '得意',
+                  'Taro Benesse',
+                  textAlign: TextAlign.start,
                   style: TextStyle(
                     fontSize: 20,
-                    color: Colors.black,
+                    height: 3
                   ),
                 ),
-                SizedBox(width: 10),
-                Image.asset(
-                  '/Users/sotaaraki/StudioProjects/mypage/lib/yamcha.png',
-                  width: 100,
-                  height: 100,
-                ),
-                SizedBox(width: 10),
-                Image.asset(
-                  '/Users/sotaaraki/StudioProjects/mypage/lib/chart.png',
-                  width: 100,
-                  height: 200,
+                Container(
+                  alignment: Alignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(width: 10),
+                      Image.asset(
+                        '/Users/sotaaraki/StudioProjects/mypage/lib/all2.png',
+                        width: 350,
+                        height: 125,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -79,7 +91,20 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Expanded(
                 child: Container(
-                  height: 150, // テキストが2行になるように適宜調整
+                  margin: EdgeInsets.only(top: 30, left: 10),
+                  height: 125,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.black26,
+                          blurRadius: 0.1,
+                          spreadRadius: 0.1,
+                          offset: Offset(3, 3))
+                    ],
+                  ),
+                  //width: 200,
+                  // テキストが2行になるように適宜調整
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.blue,
@@ -99,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             '今日の学習を',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                             ),
                           ),
                           Text(
@@ -118,7 +143,8 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(width: 10),
               Expanded(
                 child: Container(
-                  height: 150, // テキストが2行になるように適宜調整
+                  margin: EdgeInsets.only(top: 30, right: 10),
+                  height: 125, // テキストが2行になるように適宜調整
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
@@ -138,7 +164,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             '今週の学習時間',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                             ),
                           ),
                           Text(
@@ -156,12 +182,13 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
-          SizedBox(height: 40),
+          SizedBox(height: 20),
           Row(
             children: <Widget>[
               Expanded(
                 child: Container(
-                  height: 150, // テキストが2行になるように適宜調整
+                  margin: EdgeInsets.only(left: 10),
+                  height: 125, // テキストが2行になるように適宜調整
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
@@ -181,7 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             '継続ログイン日数',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                             ),
                           ),
                           Text(
@@ -200,7 +227,8 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(width: 10),
               Expanded(
                 child: Container(
-                  height: 150, // テキストが2行になるように適宜調整
+                  margin: EdgeInsets.only(right: 10),
+                  height: 125, // テキストが2行になるように適宜調整
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
@@ -220,7 +248,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             '目標達成数',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                             ),
                           ),
                           Text(
@@ -243,6 +271,8 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
 
 
 
