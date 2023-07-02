@@ -7,8 +7,9 @@ class Login extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Log in calendar'),
+        backgroundColor: const Color(0xFF5C94CB),
       ),
-      // backgroundColor: const Color(0xF3E9D9FF),
+      backgroundColor: const Color(0xFFEEECE4),
       body: Column(
         children: [
           Container(
@@ -18,6 +19,14 @@ class Login extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.black, width: 2),
+              color: Colors.white,
+              boxShadow: const [
+                BoxShadow(
+                    color: Color(0xFFA8A5A5),
+                    blurRadius: 1.0,
+                    spreadRadius: 1.0,
+                    offset: Offset(4, 4))
+              ],
             ),
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -36,10 +45,18 @@ class Login extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 160,
-            margin: EdgeInsets.only(top: 20, left: 20 ,right: 20),
+            margin: EdgeInsets.only(top: 40, left: 20 ,right: 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.black, width: 2),
+              color: Colors.white,
+              boxShadow: const [
+                BoxShadow(
+                    color: Color(0xFFA8A5A5),
+                    blurRadius: 1.0,
+                    spreadRadius: 1.0,
+                    offset: Offset(4, 4))
+              ],
             ),
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -86,6 +103,14 @@ class Login extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: Colors.black, width: 2),
+              color: Colors.white,
+              boxShadow: const [
+                BoxShadow(
+                    color: Color(0xFFA8A5A5),
+                    blurRadius: 1.0,
+                    spreadRadius: 1.0,
+                    offset: Offset(4, 4))
+              ],
             ),
             child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -129,15 +154,15 @@ class Login extends StatelessWidget {
           Container(
             width: double.infinity,
             // height: 10,
-            margin: EdgeInsets.only(top: 20, left: 20 ,right: 20),
+            margin: EdgeInsets.only(top: 25, left: 20 ,right: 20),
             child: TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, ROUTE.MYPAGE);
                 },
                 child: Text("Tap to next"),
                 style: TextButton.styleFrom(
-                  textStyle: const TextStyle(fontSize: 30),
-                  foregroundColor: Color(0xF375717A), // foreground
+                  textStyle: const TextStyle(fontSize: 25),
+                  foregroundColor: const Color(0xF375717A),// foreground
                   alignment: Alignment.topCenter,
                 )),
           ),
