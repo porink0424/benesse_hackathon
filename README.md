@@ -4,6 +4,7 @@
 
 Study EXP（努力経験値）を競い合うアプリ（オーディエンス賞受賞）
 
+[発表資料はこちら](https://docs.google.com/presentation/d/1xkLY-oLeQwD5z3H7C-iv0bNsjkMxg9lZMy44YfVE4XA/edit?usp=sharing)
 
 ### commitについて
 
